@@ -1,0 +1,4 @@
+jieba
+gensim
+tqdm
+pandas
