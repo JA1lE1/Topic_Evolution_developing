@@ -67,3 +67,7 @@
 
 - 模型训练的pytorch版本更新很多关于torch会有更新的操作，eg在training中item替代data，utils中的alias_multinomial.py做伯努利的方案的时候参数并没有像预处理在01之间。
 - ==待更新==
+
+## pyLDAvis 效果
+
+![image](./pyLDAvis.png)
