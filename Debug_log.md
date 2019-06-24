@@ -1,5 +1,63 @@
 # 主题演化测试log
 
+## 6.24
+
+- 主体演化的效果模型测试
+  - 参考Hacker_news
+- 去理解关于时间字段的意义
+
+
+
+### explore_Hacker_news 的解析
+
+- [原作者链接](https://github.com/cemoody/lda2vec/blob/master/examples/hacker_news/lda2vec/lda2vec.ipynb) 
+
+#### Article Features
+
+##### 字段
+
+- ```python
+  # Chop timestamps into days
+  story_time = pd.to_datetime(features['story_time'], unit='s')
+  days_since = (story_time - story_time.min()) / pd.Timedelta('1 day')
+  time_id = days_since.astype('int32')
+  days_since = (story_time - story_time.min()) / pd.Timedelta('1 day')
+  time_id_codes
+  ```
+
+##### 主体的思路
+
+- ```python
+  story_topics = pd.DataFrame(dict(story_id_codes=np.arange(dat['doc_topic_dists'].shape[0])))
+  # 关键就这一步 合并训练的结果和原始数据(含有time信息)  如何解决刚刚测试的长度不一致的情况
+  # 之所以不同是因为再数据处理的时候又删除了一些内容，不止dropna()删除的内容
+  # 这个可以作为解决的步骤 等于后期再做一次的数据处理
+  dat['doc_topic_dists']只有数值型数据 但是它应该是按id来排的（这个需要再确认一下）
+  然后合并原始的csv文件和新的story_topics 这个pd格式组件
+  
+  ```
+
+
+
+### 解决方案
+
+- [ ] 数据的合并---原始数据的处理+新数据(主体占比)
+  - [ ] 不用重新训练，只需要重新做数据处理(一定要百分百相同)，再给数据+标签+生成新的csv即可
+
+### 数据处理问题
+
+- ```python
+  topics=dat['doc_topic_dists']
+  topics.shape[0]
+  #4596
+  len(features)
+  #4816
+  # 好像有点问题
+  # data_process 又删除了一些内容
+  ```
+
+- 
+
 ## 6.23
 
 - 测试其在修改train文件的效果
