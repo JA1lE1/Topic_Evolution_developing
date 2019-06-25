@@ -1,5 +1,14 @@
 # 主题演化测试log
 
+## 6.25
+
+- 使用昨天做的数据清洗工作后的新生成的csv，完成与hacker_news的对比，做好主题演化前的准备工作
+- 在plots of topics vs time 的地方
+  - story_id_code 应该是以顺序的的方式去解决的
+- 在new_data上加story_id_codes就可以解决主题演化的问题，当然也可以切割一下原来的new_data的实体，使得它们不会包含很多没用的信息
+- 遇到问题 查看一下 原数据artile-time 是怎么做的？
+- 主题演化模型测试开发版v0.1  正式发布 ，具体可视化效果见Topic_Evolution_vis.ipynb
+
 ## 6.24
 
 - 主体演化的效果模型测试

@@ -211,7 +211,7 @@ if __name__ == '__main__':
 
     msg = '没有匹配预期的效果'
     assert len(news_data)==4596 ,msg
-    news_data.to_csv(data_after_train_need.csv)
+    news_data.to_csv('data_after_train_need.csv')
 
     
 #     #tokenized_docs = [(i, doc) for i, doc in tqdm(docs)]             ## 注意这里和enumerate的区别？
