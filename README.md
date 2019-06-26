@@ -84,4 +84,3 @@
 
 - [lda2vec-paper- Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1605.02019)
 - [作者本人的post](https://multithreaded.stitchfix.com/blog/2016/05/27/lda2vec/)
-
