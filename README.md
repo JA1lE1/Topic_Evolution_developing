@@ -68,6 +68,20 @@
 - 模型训练的pytorch版本更新很多关于torch会有更新的操作，eg在training中item替代data，utils中的alias_multinomial.py做伯努利的方案的时候参数并没有像预处理在01之间。
 - ==待更新==
 
-## pyLDAvis 效果
+
+
+## 主题演化的可视化效果
+
+- 详细见[Topic_Evolution_vis.ipynb](https://nbviewer.jupyter.org/github/JA1lE1/Topic_Evolution_developing/blob/master/Topic_Evolution_vis.ipynb)
+
+### pyLDAvis 效果
 
 ![image](./pyLDAvis.png)
+
+
+
+## 参考
+
+- [lda2vec-paper- Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec](https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1605.02019)
+- [作者本人的post](https://multithreaded.stitchfix.com/blog/2016/05/27/lda2vec/)
+
